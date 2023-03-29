@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Package</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Cholo Ghuri Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/offers_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/offers_responsive.css">
+</head>
+
+<body>
+
+<div class="super_container">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <!-- Top Bar -->
+
+        <div class="top_bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex flex-row">
+                        <div class="phone">+880162842256</div>
+                        <div class="social">
+                            <ul class="social_list">
+                                <li class="social_list_item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li class="social_list_item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="social_list_item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="social_list_item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+
+        <nav class="main_nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo_container">
+                            <div class="logo"><a href="#"><img src="images/logo.png" alt="">Cholo Ghuri</a></div>
+                        </div>
+                        <div class="main_nav_container ml-auto">
+                            <ul class="main_nav_list">
+                                <li class="main_nav_item"><a href="/">home</a></li>
+                                <li class="main_nav_item"><a href="/packages">packages</a></li>
+                                <li class="main_nav_item"><a href="/review">review</a></li>
+                                <li class="main_nav_item"><a href="/contact">contact</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="hamburger">
+                            <i class="fa fa-bars trans_200"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="menu trans_500">
+        <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+            <div class="menu_close_container"><div class="menu_close"></div></div>
+            <div class="logo menu_logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+            <ul>
+                <li class="main_nav_item"><a href="index.html">home</a></li>
+                <li class="main_nav_item"><a href="about.html">about us</a></li>
+                <li class="main_nav_item"><a href="offers.html">packages</a></li>
+                <li class="main_nav_item"><a href="review.html">review</a></li>
+                <li class="main_nav_item"><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Home -->
+
+    <div class="home">
+        <div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/about_background.jpg"></div>
+        <div class="home_content">
+            <div class="home_title">our offers</div>
+        </div>
+    </div>
+
+    <!-- Offers -->
+
+    <div class="offers">
+
+        <!-- Search -->
+
+        <div class="search">
+            <div class="search_inner">
+
+                <!-- Search Contents -->
+
+                <div class="container fill_height no-padding">
+                    <div class="row fill_height no-margin">
+                        <div class="col fill_height no-padding">
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offers -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1 temp_col"></div>
+                <div class="col-lg-11">
+
+                    <!-- Offers Sorting -->
+                    <div class="offers_sorting_container">
+                        <ul class="offers_sorting">
+                            <li>
+                                <span class="sorting_text">price</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <ul>
+                                    <li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }' data-parent=".price_sorting"><span>show all</span></li>
+                                    <li class="sort_btn" data-isotope-option='{ "sortBy": "price" }' data-parent=".price_sorting"><span>ascending</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="sorting_text">location</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <ul>
+                                    <li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>default</span></li>
+                                    <li class="sort_btn" data-isotope-option='{ "sortBy": "name" }'><span>alphabetical</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="sorting_text">stars</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <ul>
+                                    <li class="filter_btn" data-filter="*"><span>show all</span></li>
+                                    <li class="sort_btn" data-isotope-option='{ "sortBy": "stars" }'><span>ascending</span></li>
+                                    <li class="filter_btn" data-filter=".rating_3"><span>3</span></li>
+                                    <li class="filter_btn" data-filter=".rating_4"><span>4</span></li>
+                                    <li class="filter_btn" data-filter=".rating_5"><span>5</span></li>
+                                </ul>
+                            </li>
+                            <li class="distance_item">
+                                <span class="sorting_text">distance from center</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <ul>
+                                    <li class="num_sorting_btn"><span>distance</span></li>
+                                    <li class="num_sorting_btn"><span>distance</span></li>
+                                    <li class="num_sorting_btn"><span>distance</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="sorting_text">reviews</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <ul>
+                                    <li class="num_sorting_btn"><span>review</span></li>
+                                    <li class="num_sorting_btn"><span>review</span></li>
+                                    <li class="num_sorting_btn"><span>review</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Offers Grid -->
+
+                    <div class="offers_grid">
+
+                        <!-- Offers Item -->
+
+                        <div class="offers_item rating_4">
+                            <div class="row">
+                                <div class="col-lg-1 temp_col"></div>
+                                <div class="col-lg-3 col-1680-4">
+                                    <div class="offers_image_container">
+                                        <!-- Image by https://unsplash.com/@kensuarez -->
+                                        <div class="offers_image_background" style="background-image:url(images/seagull.jpg)"></div>
+                                        <div class="offer_name"><a href="single_listing.html">Hotel Seagull</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="offers_content">
+                                        <div class="offers_price">4,000 TK<span>per night</span></div>
+                                        <div class="rating_r rating_r_4 offers_rating" data-rating="4">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <p class="offers_text"> SEAGULL HOTEL is a hotel in Cox's Bazar where business and leisure blend together. Enjoying an unrivaled location, overlooking the Bay of Bengal .</p>
+                                        <div class="offers_icons">
+                                            <ul class="offers_icons_list">
+                                                <li class="offers_icons_item"><img src="images/post.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/compass.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/bicycle.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
+                                            </ul>
+                                        </div>
+                                        <div class="button book_button"><a href="/autherror">book<span></span><span></span><span></span></a></div>
+                                        <div class="offer_reviews">
+                                            <div class="offer_reviews_content">
+                                                <div class="offer_reviews_title">very good</div>
+                                                <div class="offer_reviews_subtitle">100 reviews</div>
+                                            </div>
+                                            <div class="offer_reviews_rating text-center">8.1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Offers Item -->
+
+                        <div class="offers_item rating_3">
+                            <div class="row">
+                                <div class="col-lg-1 temp_col"></div>
+                                <div class="col-lg-3 col-1680-4">
+                                    <div class="offers_image_container">
+                                        <!-- Image by https://unsplash.com/@thoughtcatalog -->
+                                        <div class="offers_image_background" style="background-image:url(images/offers.jpg)"></div>
+                                        <div class="offer_name"><a href="single_listing.html">Uni Resort</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="offers_content">
+                                        <div class="offers_price">3,000 TK<span>per night</span></div>
+                                        <div class="rating_r rating_r_3 offers_rating" data-rating="3">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <p class="offers_text">This is a beautiful resort in Cox's Bazar where you can enjoy your valuable time.</p>
+                                        <div class="offers_icons">
+                                            <ul class="offers_icons_list">
+                                                <li class="offers_icons_item"><img src="images/post.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/compass.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/bicycle.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
+                                            </ul>
+                                        </div>
+                                        <div class="button book_button"><a href="/autherror">book<span></span><span></span><span></span></a></div>
+                                        <div class="offer_reviews">
+                                            <div class="offer_reviews_content">
+                                                <div class="offer_reviews_title">very good</div>
+                                                <div class="offer_reviews_subtitle">100 reviews</div>
+                                            </div>
+                                            <div class="offer_reviews_rating text-center">8.1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Offers Item -->
+
+                        <div class="offers_item rating_5">
+                            <div class="row">
+                                <div class="col-lg-1 temp_col"></div>
+                                <div class="col-lg-3 col-1680-4">
+                                    <div class="offers_image_container">
+                                        <!-- Image by https://unsplash.com/@mindaugas -->
+                                        <div class="offers_image_background" style="background-image:url(images/sea.jpg)"></div>
+                                        <div class="offer_name"><a href="single_listing.html">Hotel Sea</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="offers_content">
+                                        <div class="offers_price">2,000 TK<span>per night</span></div>
+                                        <div class="rating_r rating_r_5 offers_rating"  data-rating="5">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <p class="offers_text">This is beautiful hotel in Saint Martin.Enjoying an unrivaled location, overlooking the Bay of Bengal . </p>
+                                        <div class="offers_icons">
+                                            <ul class="offers_icons_list">
+                                                <li class="offers_icons_item"><img src="images/post.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/compass.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/bicycle.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
+                                            </ul>
+                                        </div>
+                                        <div class="button book_button"><a href="/autherror">book<span></span><span></span><span></span></a></div>
+                                        <div class="offer_reviews">
+                                            <div class="offer_reviews_content">
+                                                <div class="offer_reviews_title">very good</div>
+                                                <div class="offer_reviews_subtitle">100 reviews</div>
+                                            </div>
+                                            <div class="offer_reviews_rating text-center">8.1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Offers Item -->
+
+                        <div class="offers_item rating_4">
+                            <div class="row">
+                                <div class="col-lg-1 temp_col"></div>
+                                <div class="col-lg-3 col-1680-4">
+                                    <div class="offers_image_container">
+                                        <!-- Image by https://unsplash.com/@rktkn -->
+                                        <div class="offers_image_background" style="background-image:url(images/sajek.jpg)"></div>
+                                        <div class="offer_name"><a href="#">Sajek Classic</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="offers_content">
+                                        <div class="offers_price"> 1,500 TK <span>per night</span></div>
+                                        <div class="rating_r rating_r_4 offers_rating" data-rating="4">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <p class="offers_text">Sajek Classic Resorts One of the best Resorts in Sajek.From this resort you can enjoy beautiful view of sajek</p>
+                                        <div class="offers_icons">
+                                            <ul class="offers_icons_list">
+                                                <li class="offers_icons_item"><img src="images/post.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/compass.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/bicycle.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
+                                            </ul>
+                                        </div>
+                                        <div class="button book_button"><a href="/autherror">book<span></span><span></span><span></span></a></div>
+                                        <div class="offer_reviews">
+                                            <div class="offer_reviews_content">
+                                                <div class="offer_reviews_title">very good</div>
+                                                <div class="offer_reviews_subtitle">100 reviews</div>
+                                            </div>
+                                            <div class="offer_reviews_rating text-center">8.1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Offers Item -->
+
+                        <div class="offers_item rating_3">
+                            <div class="row">
+                                <div class="col-lg-1 temp_col"></div>
+                                <div class="col-lg-3 col-1680-4">
+                                    <div class="offers_image_container">
+                                        <!-- Image by https://unsplash.com/@itsnwa -->
+                                        <div class="offers_image_background" style="background-image:url(images/offer_8.jpg)"></div>
+                                        <div class="offer_name"><a href="single_listing.html">Tanguar View</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="offers_content">
+                                        <div class="offers_price">1,500 TK<span>per night</span></div>
+                                        <div class="rating_r rating_r_3 offers_rating" data-rating="3">
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                            <i></i>
+                                        </div>
+                                        <p class="offers_text">Offer you the most exotic experience of tanguar haor, we are offering a mighty vessel that will give you the experience of a lifetime. We’re certain that the natural charm and beauty, including our professional quality service, will definitely make you come back for more.</p>
+                                        <div class="offers_icons">
+                                            <ul class="offers_icons_list">
+                                                <li class="offers_icons_item"><img src="images/post.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/compass.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/bicycle.png" alt=""></li>
+                                                <li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
+                                            </ul>
+                                        </div>
+                                        <div class="button book_button"><a href="/autherror">book<span></span><span></span><span></span></a></div>
+                                        <div class="offer_reviews">
+                                            <div class="offer_reviews_content">
+                                                <div class="offer_reviews_title">very good</div>
+                                                <div class="offer_reviews_subtitle">100 reviews</div>
+                                            </div>
+                                            <div class="offer_reviews_rating text-center">8.1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <!-- Footer Column -->
+                <div class="col-lg-3 footer_column">
+                    <div class="footer_col">
+                        <div class="footer_content footer_about">
+                            <div class="logo_container footer_logo">
+                                <div class="logo"><a href="#"><img src="images/logo.png" alt="">CHOLO GHURI</a></div>
+                            </div>
+                            <p class="footer_about_text">We are committed to offering travel services of the highest quality, combining our energy and enthusiasm, with our years of experience. Our greatest satisfaction comes in serving large numbers of satisfied clients who have experienced the joys and inspiration of travel.</p>
+                            <ul class="footer_social_list">
+                                <li class="footer_social_item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li class="footer_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li class="footer_social_item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Column -->
+                <div class="col-lg-3 footer_column">
+                    <div class="footer_col">
+                        <div class="footer_title">contact info</div>
+                        <div class="footer_content footer_contact">
+                            <ul class="contact_info_list">
+                                <li class="contact_info_item d-flex flex-row">
+                                    <div><div class="contact_info_icon"><img src="images/placeholder.svg" alt=""></div></div>
+                                    <div class="contact_info_text">TA-75 , Badda ,Dhaka </div>
+                                </li>
+                                <li class="contact_info_item d-flex flex-row">
+                                    <div><div class="contact_info_icon"><img src="images/phone-call.svg" alt=""></div></div>
+                                    <div class="contact_info_text">01628452256</div>
+                                </li>
+                                <li class="contact_info_item d-flex flex-row">
+                                    <div><div class="contact_info_icon"><img src="images/message.svg" alt=""></div></div>
+                                    <div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">Hosain@gmail.com</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 order-lg-1 order-2  ">
+                </div>
+                <div class="col-lg-9 order-lg-2 order-1">
+                    <div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
+                        <div class="footer_nav">
+                            <ul class="main_nav_list">
+                                <li class="main_nav_item"><a href="/">home</a></li>
+                                <li class="main_nav_item"><a href="/aboutUs">about us</a></li>
+                                <li class="main_nav_item"><a href="/contact">contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/offers_custom.js"></script>
+
+</body>
+
+</html>
