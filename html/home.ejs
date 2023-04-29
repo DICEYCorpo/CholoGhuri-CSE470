@@ -23,71 +23,7 @@
 
     <!-- Header -->
 
-    <header class="header">
-
-        <!-- Top Bar -->
-
-        <div class="top_bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col d-flex flex-row">
-                        <div class="phone">+880162842256</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Navigation -->
-
-        <nav class="main_nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
-                        <div class="logo_container">
-                            <div class="logo"><a href="#"><img src="images/logo.png" alt="">Cholo Ghuri</a></div>
-
-                        </div>
-                        <div class="main_nav_container ml-auto">
-                            <ul class="main_nav_list">
-                                <li class="main_nav_item"><a href="/">home</a></li>
-                                <li class="main_nav_item"><a href="/packages">packages</a></li>
-                                <li class="main_nav_item"><a href="/review">review</a></li>
-                                <li class="main_nav_item"><a href="/contact">contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="icons">
-                            <i class="fas fa-user" id="login-btn"></i>
-                        </div>
-
-
-                        <!-- login form container -->
-                        <div class="login-form-container">
-                            <i class="fas fa-times" id="form-close"></i>
-
-                            <form action="/loginHome" method="post">
-                                <h3>login</h3>
-                                <label for="email"></label>
-                                <input type="email" class = "box" id="email" placeholder="Enter your email" required = "required" name="login[email]"/>
-                                <label for="password"></label>
-                                <input type="password" class="box" id="password" placeholder="Enter your password" required = "required" name="login[password]"/>
-                                <input type="submit" value="login now" class="btn" />
-                                <input type="checkbox" id="remember" />
-                                <label for="remember"> remember me </label>
-                                <p>don't have an account? <a href="/registration">register now </a></p>
-                            </form>
-                        </div>
-
-
-                        <div class="hamburger">
-                            <i class="fa fa-bars trans_200"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-    </header>
+    <%- include('partials/header') %>
 
 
     <!-- Home -->
@@ -102,7 +38,6 @@
 
 
 
-                !-- Slider Item -->
                 <div class="owl-item home_slider_item">
                     <div class="home_slider_background" style="background-image:url(images/discord.jpg)"></div>
 
@@ -143,7 +78,6 @@
                     </div>
                 </div>
 
-                <
 
             </div>
 

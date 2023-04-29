@@ -1,35 +1,49 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const ejs = require("ejs");
+const app = express();
 const bcrypt = require('bcrypt');
 const session = require('express-session');
-const CholoGhuriPackage = require('./model/packages')
+const passport = require("passport");
+const passportLocalMongoose = require("passport-local-mongoose");
 const UserCreds = require('./model/usercredentials')
 const TourDetails = require('./model/tourdetails')
 const Pricing = require('./model/pricing')
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/chologhuri');
-
-const db = mongoose.connection;
-
-db.on('error', console.error.bind(console,"connection error:"));
-db.once('open', ()=>{
-    console.log("Database Connected")
-})
 
 
-const app = express();
-app.use(session({secret:'notagoodsecret'}))
+app.set('view engine', 'ejs')
+app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, "public")))
+app.use(session({
+    secret: "Our little secret.",
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(passport.initialize());
+app.use(passport.session());
+mongoose.connect("mongodb://localhost:27017/chologhuri", {useNewUrlParser: true});
+
+
+passport.use(UserCreds.createStrategy());
+
+
+passport.serializeUser(UserCreds.serializeUser())
+passport.deserializeUser(UserCreds.deserializeUser())
 app.set('views', path.join(__dirname, 'views'))
 app.set('public', path.join(__dirname, 'public'))
-app.use(express.urlencoded({extended: true}))
-app.set('view engine', 'ejs')
+
+
 
 
 app.get('/', (req, res) =>{
-    res.render('home')
+    if (req.isAuthenticated()) {
+        res.render("loggedhome");
+    } else {
+        res.render("home");
+    }
 })
 
 app.get("/packages", (req, res) =>{
@@ -51,41 +65,49 @@ app.get("/contact", (req, res) =>{
 app.get('/registration', (req, res) =>{
     res.render('registration')
 })
-app.post('/registersuccess', async(req, res) =>{
-    const {fname, lname,email,phone,pass,confirmpass,age,category} = req.body.credentials
-    const hash = await bcrypt.hash(pass, 12);
-    const usercred = new UserCreds({
-        fname,
-        lname,
-        email,
-        phone,
-        pass: hash,
-        confirmpass,
-        age:req.body.credentials.dateofbirth,
-        category,
-        gender: req.body.credentials.gender
+
+app.post('/registration', function (req, res) {
+    UserCreds.register(new UserCreds({username: req.body.username, name: req.body.name, phone: req.body.phone, email: req.body.email, age: req.body.age, gender: req.body.gender, category: req.body.category }), req.body.password).then(function(user) {
+        passport.authenticate("local")(req, res, function() {
+            res.redirect("/");
+        })
+    }) .catch(function(err) {
+        console.log(err);
+        res.redirect("/registration")
     })
-    await usercred.save();
-    res.render('regsucces')
-} );
-app.post("/loginHome", async (req, res) =>{
-    const {email, password} = req.body.login;
-    const user = await UserCreds.findOne({email});
-    const validity = await bcrypt.compare(password, user.pass);
-    if (validity){
-        req.session.user_id = user._id;
-        res.render('loggedhome')
-    }
-    else {
-        res.redirect("/wrong")
-    }
-});
+})
+
+app.post("/login", function(req, res) {
+    const user = new UserCreds({
+        email: req.body.email,
+        password: req.body.password
+    })
+    req.login(user, function(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            passport.authenticate("local")(req, res, function() {
+                res.redirect("/");
+            })
+        }
+    })
+
+})
+app.get("/logout", function(req, res) {
+    req.logout(function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.redirect("/");
+        }
+    });
+})
+
 app.get("/loggedbooking", (req, res) =>{
-    if (!req.body.user_id){
-        res.render('loggedbooking')
-    }
-    else {
-        res.render('autherror')
+    if (req.isAuthenticated()) {
+        res.render("loggedbooking");
+    } else {
+        res.redirect("/");
     }
 
 });
@@ -116,9 +138,7 @@ app.get('/loggedContactUs', (req, res) =>{
     res.render("loggedContactUs")
 
 });
-app.get("/loginHome", async (req, res) =>{
-    res.render('loggedhome')
-})
+
 
 app.get('/profile', async (req, res) => {
     const profile = await UserCreds.findById(req.session.user_id)
@@ -191,8 +211,8 @@ app.get('/logout', (req, res) =>{
 app.use((req,res)=>{
     res.status(404).send('Not Found')
 });
-app.listen(1417, () =>{
-    console.log('Service Port 1417')
+app.listen(3000, () =>{
+    console.log('Service Port 3000')
 });
 
 

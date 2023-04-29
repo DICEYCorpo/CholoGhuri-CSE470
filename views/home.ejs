@@ -23,71 +23,7 @@
 
     <!-- Header -->
 
-    <header class="header">
-
-        <!-- Top Bar -->
-
-        <div class="top_bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col d-flex flex-row">
-                        <div class="phone">+880162842256</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Navigation -->
-
-        <nav class="main_nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
-                        <div class="logo_container">
-                            <div class="logo"><a href="#"><img src="images/logo.png" alt="">Cholo Ghuri</a></div>
-
-                        </div>
-                        <div class="main_nav_container ml-auto">
-                            <ul class="main_nav_list">
-                                <li class="main_nav_item"><a href="/">home</a></li>
-                                <li class="main_nav_item"><a href="/packages">packages</a></li>
-                                <li class="main_nav_item"><a href="/review">review</a></li>
-                                <li class="main_nav_item"><a href="/contact">contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="icons">
-                            <i class="fas fa-user" id="login-btn"></i>
-                        </div>
-
-
-                        <!-- login form container -->
-                        <div class="login-form-container">
-                            <i class="fas fa-times" id="form-close"></i>
-
-                            <form action="/loginHome" method="post">
-                                <h3>login</h3>
-                                <label for="email"></label>
-                                <input type="email" class = "box" id="email" placeholder="Enter your email" required = "required" name="login[email]"/>
-                                <label for="password"></label>
-                                <input type="password" class="box" id="password" placeholder="Enter your password" required = "required" name="login[password]"/>
-                                <input type="submit" value="login now" class="btn" />
-                                <input type="checkbox" id="remember" />
-                                <label for="remember"> remember me </label>
-                                <p>don't have an account? <a href="/registration">register now </a></p>
-                            </form>
-                        </div>
-
-
-                        <div class="hamburger">
-                            <i class="fa fa-bars trans_200"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-    </header>
+    <%- include('partials/header') %>
 
 
     <!-- Home -->
@@ -102,7 +38,6 @@
 
 
 
-                !-- Slider Item -->
                 <div class="owl-item home_slider_item">
                     <div class="home_slider_background" style="background-image:url(images/discord.jpg)"></div>
 
@@ -198,34 +133,6 @@
     </div>
 
     <!-- Search -->
-
-    <div class="search">
-
-
-        <!-- Search Contents -->
-
-        <div class="container fill_height">
-            <div class="row fill_height">
-                <div class="col fill_height">
-
-                    <!-- Search Tabs -->
-
-                    <div class="search_tabs_container">
-                        <div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                            <div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/suitcase.png" alt=""><span>hotels</span></div>
-                            <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/bus.png" alt="">car rentals</div>
-                            <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/island.png" alt="">trips</div>
-                            <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/diving.png" alt="">activities</div>
-                        </div>
-                    </div>
-
-                    <!-- Search Panel -->
-
-
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Intro -->
 
@@ -817,48 +724,7 @@
 
 <!-- Footer -->
 
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-
-            <!-- Footer Column -->
-            <div class="col-lg-3 footer_column">
-                <div class="footer_col">
-                    <div class="footer_content footer_about">
-                        <div class="logo_container footer_logo">
-                            <div class="logo"><a href="#"><img src="images/logo.png" alt="">Cholo Ghuri</a></div>
-                        </div>
-                        <p class="footer_about_text">We are committed to offering travel services of the highest quality, combining our energy and enthusiasm, with our years of experience. Our greatest satisfaction comes in serving large numbers of satisfied clients who have experienced the joys and inspiration of travel.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Column -->
-            <div class="col-lg-3 footer_column">
-                <div class="footer_col">
-                    <div class="footer_title">contact info</div>
-                    <div class="footer_content footer_contact">
-                        <ul class="contact_info_list">
-                            <li class="contact_info_item d-flex flex-row">
-                                <div><div class="contact_info_icon"><img src="images/placeholder.svg" alt=""></div></div>
-                                <div class="contact_info_text">TA-75 , Badda ,Dhaka </div>
-                            </li>
-                            <li class="contact_info_item d-flex flex-row">
-                                <div><div class="contact_info_icon"><img src="images/phone-call.svg" alt=""></div></div>
-                                <div class="contact_info_text">01628452256</div>
-                            </li>
-                            <li class="contact_info_item d-flex flex-row">
-                                <div><div class="contact_info_icon"><img src="images/message.svg" alt=""></div></div>
-                                <div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">Hosain@gmail.com</a></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</footer>
+<%- include('partials/footer') %>
 
 <div class="copyright">
     <div class="container">

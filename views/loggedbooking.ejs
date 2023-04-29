@@ -18,62 +18,7 @@
 
     <!-- Header -->
 
-    <header class="header">
-
-        <!-- Top Bar -->
-
-        <div class="top_bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col d-flex flex-row">
-                        <div class="phone">01628452256</div>
-                        <div class="social">
-                            <ul class="social_list">
-                                <li class="footer_social_item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li class="footer_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li class="footer_social_item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Navigation -->
-
-        <nav class="main_nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
-                        <div class="logo_container">
-                            <div class="logo"><a href="#"><img src="images/logo.png" alt="">CHOLO GHURI</a></div>
-                        </div>
-                        <div class="main_nav_container ml-auto">
-                            <ul class="main_nav_list">
-                                <li class="main_nav_item"><a href="/loginHome">home</a></li>
-                                <li class="main_nav_item"><a href="/loggedbooking">booking</a></li>
-                                <li class="main_nav_item"><a href="/loggedoffers">packages</a></li>
-                                <li class="main_nav_item"><a href="/loggedreview">review</a></li>
-                                <li class="main_nav_item"><a href="/loggedContactUs">contact</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <a class="btn-sm btn-primary" href="/" role="button">Profile</a> &nbsp
-                        </div>
-
-                        <div>
-                            <a class="btn-sm btn-danger" href="/" role="button">Logout</a> &nbsp
-                        </div>
-
-                        <div class="hamburger">
-                            <i class="fa fa-bars trans_200"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-    </header>
+    <%- include('partials/loggedheader') %>
 
 
     <!-- Home -->
