@@ -39,7 +39,7 @@
     <div class="home">
         <div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/contact_background.jpg"></div>
         <div class="home_content">
-            <div class="home_title">Payment</div>
+            <div class="home_title">Pending</div>
         </div>
     </div>
 
@@ -61,86 +61,51 @@
                             <span>n</span>
                             <span>t</span>
                         </h1>
+                        <%user.forEach(function (ele) {%>
 
-                        <div class="row">
-                            <div class="image">
-                                <img src="images/book-img.avif" alt="" />
-                            </div>
+                        <h2>#)</h2><p><%=ele.from%> to <%=ele.to%> (<%=ele.hotel%>)</p>
+                        <div class="flex-md-row-reverse">
+
                             <ul class="list-group list-group-horizontal">
                                 <li class="list-group-item">Hotel Cost</li>
-                                <li class="list-group-item"><%=hotelprice%></li>
+                                <li class="list-group-item"><%=ele.hotelprice%></li>
                             </ul>
                             <ul class="list-group list-group-horizontal-sm">
                                 <li class="list-group-item">Transportation Cost</li>
-                                <li class="list-group-item"><%=transportprice%></li>
+                                <li class="list-group-item"><%=ele.transportprice%></li>
 
                             </ul>
                             <ul class="list-group list-group-horizontal-md">
                                 <li class="list-group-item">Cost for Volunteer </li>
-                                <li class="list-group-item"><%=volunteerprice%></li>
+                                <li class="list-group-item"><%=ele.volunteerprice%></li>
 
                             </ul>
                             <ul class="list-group list-group-horizontal-lg">
                                 <li class="list-group-item">Total Persons</li>
-                                <li class="list-group-item"><%=fetchguest%></li>
+                                <li class="list-group-item"><%=ele.fetchguest%></li>
 
                             </ul>
                             <ul class="list-group list-group-horizontal-xl">
                                 <li class="list-group-item">Total Amount</li>
-                                <li class="list-group-item"><%=total%></li>
+                                <li class="list-group-item"><%=ele.total%></li>
 
-                            </ul><br><br>
+                            </ul>
+                        </div>
+                        <br><br>
+
+
+                            <%})%>
 
                             <!-- book section ends-->
 
-                        </div>
+
+                    </section>
                 </div>
             </div>
         </div>
         <br>
         <br>
         <br>
-        <form action="/paid" method="post">
-            <div class="container p-0">
-
-
-            <div class="card px-4">
-                <p class="h8 py-3">Payment Details</p>
-                <div class="row gx-3">
-                    <div class="col-12">
-                        <div class="d-flex flex-column">
-                            <p class="text mb-1">Person Name</p>
-                            <input class="form-control mb-3" type="text" placeholder="Name" >
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex flex-column">
-                            <p class="text mb-1">Card Number</p>
-                            <input class="form-control mb-3" type="text" placeholder="">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex flex-column">
-                            <p class="text mb-1">Expiry</p>
-                            <input class="form-control mb-3" type="text" placeholder="MM/YYYY">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex flex-column">
-                            <p class="text mb-1">CVV/CVC</p>
-                            <input class="form-control mb-3 pt-2 " type="password" placeholder="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary mb-3"> Pay <%=total%> Taka</button>
-                        <button type="submit" formaction="/paylater" class="btn btn-primary mb-3">Pay Later</button>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        </form>
         <!-- About -->
         <div class="about">
             <div class="container">

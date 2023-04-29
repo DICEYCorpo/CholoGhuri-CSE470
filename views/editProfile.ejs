@@ -26,7 +26,7 @@
     <div class="home">
         <div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/contact_background.jpg"></div>
         <div class="home_content">
-            <div class="home_title">Booking</div>
+            <div class="home_title">Edit Profile</div>
         </div>
     </div>
 
@@ -40,105 +40,23 @@
                     <!-- book section starts-->
 
                     <section class="book" id="book">
-                        <h1 class="heading">
-                            <span>B</span>
-                            <span>o</span>
-                            <span>o</span>
-                            <span>k</span>
-                            <span>i</span>
-                            <span>n</span>
-                            <span>g</span>
-                        </h1>
 
                         <div class="row">
                             <div class="image">
                                 <img src="images/book-img.avif" alt="" />
                             </div>
-                            <form action="/storetemp" method="post">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1"></label>
-                                    <h2 class="text-dark" >From</h2>
-                                    <select class="form-control"  id="exampleFormControlSelect1" name="from">
-                                        <option class= "text-dark">Dhaka</option>
-                                        <option class= "text-dark">Chitagong</option>
-                                        <option class= "text-dark">Mymensingh</option>
-                                        <option class= "text-dark">Cumilla</option>
-                                        <option class= "text-dark">Sylhet</option>
-                                        <option class= "text-dark">Khulna</option>
-                                        <option class= "text-dark">Barisal</option>
-                                        <option class= "text-dark">Rajshahi</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <h2 class="text-dark">Where To</h2>
-                                    <label for="xampleFormControlSelect1"></label>
-                                    <select class="form-control"  id="xampleFormControlSelect1" name="to">
-                                        <option >Cox's Bazar</option>
-                                        <option >Tanguar Haor</option>
-                                        <option >Saint Martin</option>
-                                        <option >Sajek</option>
-                                        <option >Bandarban</option>
-                                        <option >Kaptai</option>
-                                        <option >Sylhet</option>
-                                        <option >Sundarban</option>
-                                        <option >Rangamati</option>
-                                    </select>
-                                </div>
-
+                            <form action="/editprofile" method="post">
                                 <div class="inputBox">
-                                    <label for="numberofguest"></label>
-                                    <h3 class="text-dark">How many</h3>
-                                    <input type="text" id ='numberofguest' placeholder="number of guests" name="guests"/>
+                                    <label for="newname"></label>
+                                    <h3 class="text-dark">New Name</h3>
+                                    <input type="text" id ='newname' placeholder="Enter New Name" name="newname"/>
                                 </div>
-
                                 <div class="inputBox">
-                                    <label for="departure"></label>
-                                    <h3 class="text-dark">Departure</h3>
-                                    <input type="date" id="departure" name="departure"/>
+                                    <label for="newemail"></label>
+                                    <h3 class="text-dark">New Email</h3>
+                                    <input type="email" id ='newemail' placeholder="Enter New Email" name="newemail"/>
                                 </div>
-
-                                <div class="inputBox">
-                                    <label for="arrival"></label>
-                                    <h3 class="text-dark">Arrival</h3>
-                                    <input type="date" id="arrival" name="arrival"/>
-                                </div>
-                                <br>
-                                <br>
-
-                                <div class="form-group">
-                                    <h2 class="text-dark">Hotel</h2>
-                                    <label for="hotels"></label>
-                                    <select class="form-control"  id="hotels" name="hotel">
-                                        <option >Tanguar View</option>
-                                        <option >Sajek Classic</option>
-                                        <option >Hotel Sea</option>
-                                        <option >Uni Resort</option>
-                                        <option >Hotel Seagull</option>
-                                    </select>
-                                </div>
-                                <br>
-                                <br>
-
-                                <div class="form-group">
-                                    <h2 class="text-dark">Transportation Type</h2>
-                                    <label for="transport"></label>
-                                    <select class="form-control"  id="transport" name="transport">
-                                        <option >Bus</option>
-                                        <option >Car</option>
-                                    </select>
-                                </div>
-                                <br>
-                                <br>
-
-                                <div class="form-group">
-                                    <h2 class="text-dark">Volunteer Needed?</h2>
-                                    <label for="volunteer"></label>
-                                    <select class="form-control"  id="volunteer" name="volunteer">
-                                        <option >Needed</option>
-                                        <option >Not Needed</option>
-                                    </select>
-                                </div>
-                                <input type="submit" style="'background-color:blue" class="btn" value="Confirm Booking" />
+                                <input type="submit" style="'background-color:blue" class="btn" value="Confirm" />
                             </form>
                         </div>
                     </section>

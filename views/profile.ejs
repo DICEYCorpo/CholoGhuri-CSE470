@@ -66,11 +66,11 @@
                         </div>
                         <div class="main_nav_container ml-auto">
                             <ul class="main_nav_list">
-                                <li class="main_nav_item"><a href="/loginHome">home</a></li>
+                                <li class="main_nav_item"><a href="/">home</a></li>
                                 <li class="main_nav_item"><a href="/loggedbooking">booking</a></li>
-                                <li class="main_nav_item"><a href="/loggedoffers">packages</a></li>
-                                <li class="main_nav_item"><a href="/loggedreview">review</a></li>
-                                <li class="main_nav_item"><a href="/loggedContactUs">contact</a></li>
+                                <li class="main_nav_item"><a href="/packages">packages</a></li>
+                                <li class="main_nav_item"><a href="/review">review</a></li>
+                                <li class="main_nav_item"><a href="/contact">contact</a></li>
                             </ul>
                         </div>
                         <div>
@@ -112,12 +112,8 @@
 
     <ul class="list-group list-group-flush">
         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-            <h6 class="mb-0"></path></svg>First Name</h6>
-            <span class="text-secondary"><%=fetchfname%></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-            <h6 class="mb-0"></path></svg>Last Name</h6>
-            <span class="text-secondary"><%=fetchlname%></span>
+            <h6 class="mb-0"></path></svg>Name</h6>
+            <span class="text-secondary"><%=fetchname%></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
             <h6 class="mb-0"></path></svg>Birth Date</h6>
@@ -131,7 +127,8 @@
             <h6 class="mb-0"></path></svg>Email</h6>
             <span class="text-secondary"><%=fetchemail%></span>
         </li>
-        <a class="btn btn-primary" href="/payment" role="button">Pending Payment</a>
+        <a class="btn btn-primary" href="/pending" role="button">Pending Payment</a>
+        <a class="btn btn-primary" href="/editprofile" role="button">Edit Profile</a>
     </ul>
 
 
@@ -146,7 +143,8 @@
             </div>
         </div>
     </div>
-    </div>
+    </section>
+
 
 
 

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
-const TourDetails = new Schema({
+const TempDetails = new Schema({
     username: String,
     from: String,
     to: String,
@@ -17,6 +17,7 @@ const TourDetails = new Schema({
     volunteerprice: Number,
     total: Number,
     fetchguest: Number
+
 })
 
-module.exports = mongoose.model('tourdetail', TourDetails)
+module.exports = mongoose.model('temp', TempDetails)
